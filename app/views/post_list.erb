@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Welcome to <%= @selected_category.name %>!</h1>
+
+  <table>
+    <tr>
+      <th>POSTS</th>
+    </tr>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><a href="/post/<%= "#{post.id}" %>"><%= post.title %></a></td>
+      </tr>
+    <% end %>
+  </table>
+  <a href="/post_create">Create a new post!</a>
+
+</div>

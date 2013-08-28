@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Create a post.</h1>
+  <form action="/post_create" method="post">
+    <p>Category:</p>
+    <select name="post[category_id]">
+      <% Category.all.each do |cat| %>
+        <option value="<%= "#{cat.id}" %>"><%= cat.name %></option>    
+      <% end %>  
+    </select>
+    <p>Title:</p>
+    <input type="text" name="post[title]">
+    <p>Description:</p>
+    <input type="text" name="post[description]">
+    <p>Price:</p>
+    <input type="text" name="post[price]">
+    <p>Email:</p>
+    <input type="text" name="post[email]">
+    <input type="submit" value="Submit Post">
+  </form>
+    
+</div>

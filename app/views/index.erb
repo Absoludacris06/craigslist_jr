@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Welcome to Fakelist Jr.!</h1>
+  <p>Let us get weird!</p>
+
+  <table>
+    <tr>
+      <th>CATEGORY</th>
+    </tr>
+    <% Category.all.each do |category| %>
+      <tr>
+        <td><a href="/cat/<%= "#{category.id}" %>"><%= category.name %></a></td>
+      </tr>
+    <% end %>
+  </table>
+  <a href="/post_create">Create a new post!</a>
+
+</div>
